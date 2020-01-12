@@ -101,7 +101,7 @@ let generator = {
 function generatorForm(formContainer, passwordBruteForceSpeedID, maximumPasswordTerm, probabilityBruteForce, validChars) {
     let colorBlocks = '.regeneratePassword, .generator__header,.gen-form__select';
     let passwordOutput = '.generator__header__password';
-    $(formContainer).find('input').change( formWrapper );
+    $(formContainer).find('input').on('input',  formWrapper );
     $('.regeneratePassword').click( formWrapper );
 
     function getInputs($formContainer) {
