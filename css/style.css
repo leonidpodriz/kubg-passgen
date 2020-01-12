@@ -1,0 +1,159 @@
+body {
+  font-family: Roboto,sans-serif;
+}
+
+.header {
+  background: #40BBB6;
+}
+
+.header__title {
+  font-weight: 600;
+}
+
+.header__title--light {
+  font-weight: 100;
+}
+
+.generator {
+  background-color: #F5F5F5;
+}
+
+.generator__header {
+  position: relative;
+  background: #40BBB6;
+  border: 5px solid #CFEEEC;
+  border-radius: 30px 30px 0 0;
+  border-bottom: 0;
+}
+
+.generator__header__password {
+  font-size: 60px;
+  font-weight: 100;
+  color: #fff;
+  line-height: 100%;
+  overflow: visible;
+}
+
+.generator__header__underline {
+  width: 475px;
+}
+
+.generator__body {
+  background-color: #fff;
+  border-radius: 0 0 30px 30px;
+}
+
+.gen-form__select {
+  font-family: Roboto, sans-serif;
+  color: #fff;
+  background: #40BBB6;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+  border: 3px solid #CFEEEC;
+  border-top: 0;
+  padding-left: 30px;
+}
+
+.input-group {
+  margin-bottom: 22px;
+}
+
+.input-group span {
+  color: #40BBB6;
+  font-size: 12px;
+}
+
+.input-group input {
+  border: 0;
+  border-bottom: 1px solid #40BBB6;
+  height: 35px;
+  -webkit-transition: bottom .3s;
+  transition: bottom .3s;
+  position: relative;
+  font-weight: 600;
+  color: #40BBB6;
+}
+
+.input-group input:focus {
+  outline: 0;
+  border-bottom: 2px solid #40BBB6;
+}
+
+.input-group::after {
+  content: attr(data-dimension);
+  position: absolute;
+  color: #40BBB6;
+  right: 0;
+  bottom: 5px;
+  font-size: 13px;
+}
+
+.charVariant label {
+  color: #40BAB5;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+}
+
+.custom-control {
+  margin-bottom: 10px;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #40bbb6;
+  background-color: #40BBB6;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 0.2rem rgba(64, 187, 182, 0.25);
+}
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+  background-color: rgba(64, 187, 182, 0.25);
+  border-color: rgba(64, 187, 182, 0.25);
+}
+
+.details h3 {
+  color: #40BBB6;
+  font-size: 16px;
+}
+
+.details p {
+  font-size: 12px;
+  color: #40BBB6;
+  margin: 0;
+}
+
+.details p span {
+  font-weight: 700;
+}
+
+.footer-form .btn {
+  background-color: #40bbb6;
+  color: #fff;
+  font-weight: 400;
+  font-family: Roboto, sans-serif;
+}
+
+.footer {
+  background: #40BBB6;
+  font-family: Roboto, sans-serif;
+}
+
+.copyPassword {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: 26px;
+  width: 26px;
+  border-radius: 100%;
+  border: 1px solid #00CAC2;
+  background: #CFEEEC;
+  font-size: 13px;
+  text-align: center;
+}
+
+.copyPassword i {
+  line-height: 100%;
+  color: #40BBB6;
+}

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4bab9868b4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body class="m-0 p-0">
+<header class="header">
+    <div class="container">
+        <div class="row text-center py-3">
+            <div class="col text-center">
+                <h1 class="header__title text-white">
+                    Password<span class="header__title--light">Generator</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="generator py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-6 generator__header pb-4 pt-5">
+                <p id="password" class="generator__header__password text-center mb-3">- - - - - - -</p>
+                <hr class="generator__header__underline bg-white my-0">
+<!--                <button class="copyPassword" onclick="copyPassword(this, '#password')" title="Copied!"><i class="far fa-copy"></i></button>-->
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-6 generator__body gen-form justify-content-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <select name="variant" id="" class="w-100 gen-form__select py-2">
+                                <option value="variant" data-p="0" data-v="0" data-t="0">Select variant</option>
+                                <option value="variant1" data-p="0.000001" data-v="10" data-t="7200">Variant 1</option>
+                                <option value="variant2" data-p="0.00001" data-v="0.007" data-t="43200">Variant 2</option>
+                                <option value="variant3" data-p="0.0001" data-v="15" data-t="20160">Variant 3</option>
+                                <option value="variant4" data-p="0.0000001" data-v="0.007" data-t="10080">Variant 4</option>
+                                <option value="variant5" data-p="0.0001" data-v="0.07" data-t="17280">Variant 5</option>
+                                <option value="variant6" data-p="0.0000001" data-v="11" data-t="8640">Variant 6</option>
+                                <option value="variant7" data-p="0.000001" data-v="0.07" data-t="21600">Variant 7</option>
+                                <option value="variant8" data-p="0.00001" data-v="0.07" data-t="43200">Variant 8</option>
+                                <option value="variant9" data-p="0.000001" data-v="0.007" data-t="30240">Variant 9</option>
+                                <option value="variant10" data-p="0.00001" data-v="3" data-t="10080">Variant 10</option>
+                                <option value="variant11" data-p="0.0000001" data-v="10" data-t="8640">Variant 11</option>
+                                <option value="variant12" data-p="0.000001" data-v="3" data-t="7200">Variant 12</option>
+                                <option value="variant13" data-p="0.0000001" data-v="15" data-t="28800">Variant 13</option>
+                                <option value="variant14" data-p="0.0001" data-v="20" data-t="20160">Variant 14</option>
+                                <option value="variant15" data-p="0.000001" data-v="15" data-t="17280">Variant 15</option>
+                                <option value="variant16" data-p="0.00001" data-v="15" data-t="14400">Variant 16</option>
+                                <option value="variant17" data-p="0.000001" data-v="20" data-t="30240">Variant 17</option>
+                                <option value="variant18" data-p="0.0000001" data-v="3" data-t="43200">Variant 18</option>
+                                <option value="variant19" data-p="0.00001" data-v="11" data-t="28800">Variant 19</option>
+                                <option value="variant20" data-p="0.00001" data-v="20" data-t="8640">Variant 20</option>
+                                <option value="variant21" data-p="0.0001" data-v="10" data-t="7200">Variant 21</option>
+                                <option value="variant22" data-p="0.00001" data-v="3" data-t="12000">Variant 22</option>
+                                <option value="variant23" data-p="0.0001" data-v="10" data-t="30240">Variant 23</option>
+                                <option value="variant24" data-p="0.0000001" data-v="0.07" data-t="14400">Variant 24</option>
+                                <option value="variant25" data-p="0.0001" data-v="3" data-t="8640">Variant 25</option>
+                                <option value="variant26" data-p="0.00001" data-v="10" data-t="10080">Variant 26</option>
+                                <option value="variant27" data-p="0.000001" data-v="11" data-t="20160">Variant 26</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row py-4">
+                        <div class="col-7 border-right">
+                            <div class="input-group" data-dimension="pass/min" >
+                                <span>Brute force speed</span>
+                                <input type="text" id="passwordBruteForceSpeed" class="w-100" placeholder="0">
+                            </div>
+                            <div class="input-group" data-dimension="min">
+                                <span>Maximal term of password</span>
+                                <input type="text" id="maximumPasswordTerm" class="w-100" placeholder="0">
+                            </div>
+                            <div class="input-group">
+                                <span>Probability of brute force</span>
+                                <input type="text" id="probabilityBruteForce" class="w-100" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="col-5 charVariant">
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" checked class="custom-control-input" id="numbers">
+                                <label class="custom-control-label" for="numbers">Numbers</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="letters">
+                                <label class="custom-control-label" for="letters">Letters</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="lettersUpperCase">
+                                <label class="custom-control-label" for="lettersUpperCase">Uppercase letters</label>
+                            </div>
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="symbols">
+                                <label class="custom-control-label" for="symbols">Symbols</label>
+                            </div>
+                            <div class="details">
+                                <h3 class="m-0 mb-1 mt-3">Details</h3>
+                                <p class="details__title">Password chars possible: <span id="charactersInSpace">-</span></p>
+                                <p class="details__title">Password space strong: <span id="passwordSpaceStrong">-</span></p>
+                                <p class="details__title">Password length: <span id="passwordLength">-</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row py-4 footer-form justify-content-center">
+                        <button class="btn regeneratePassword">Re-Generate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="row text-white py-4">
+            <div class="col-12 col-md-6">
+                <p class="m-0">KUBG - FITU</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <p class="text-md-right m-0">Developed by <strong>Leonid Podriz</strong></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="./js/script.js"></script>
+
+</body>
+</html>
